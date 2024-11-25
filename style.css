@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 0;
+    padding: 5%;
+    background: linear-gradient(120deg, rgb(152, 37, 152), rgb(207, 94, 162));
+    width: 100%;
+    min-height: 100vh;
+}
+
+.main {
+    width: 70%;
+    max-width: 80%;
+    padding: 1% 2.5% 2.5%;
+    background-color: aliceblue;
+    margin: auto;
+    border-radius: 10px;
+}
+
+.main h2 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5%;
+    justify-content: center;
+}
+
+.main h2 img {
+    width: 3vh;
+    height: 3vh;
+    margin-left: 1.5%;
+}
+
+.add-area {
+    display: flex;
+    width: 100%;
+    margin-bottom: 2%;
+    border-radius: 40px;
+    background: rgb(223, 195, 158);
+    align-items: center;
+    justify-content: space-between;
+}
+
+.add-area input {
+    flex: 1;
+    padding: 1% 0% 1% 2%;
+    font-size: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.add-area button {
+    width: 20%;
+    border: none;
+    border-radius: 40px;
+    height: 6vh;
+    background: rgb(248, 125, 2);
+    cursor: pointer;
+    font-size: 100%;
+    transition: 0.5s ease;
+}
+
+.add-area button:hover {
+    width: 22%;
+} 
+
+ul li {
+    list-style: none;
+    user-select: none;
+    font-size: 130%;
+    padding: 2% 2% 2% 5%;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+ul li::before {
+    content: "";
+    position: absolute;
+    left: 1%;
+    padding: 1% 1% 1% 1%;
+    scale: 1.2;
+    background: url(assets/stop.png);
+    background-size: cover;
+    background-position: center;
+}
+
+ul li.check {
+    text-decoration: line-through;
+    color: grey;
+}
+
+ul li.check::before {
+    background: url(assets/read-receipt.png);
+    background-position: center;
+    background-size: cover;
+}
+
+ul li span{
+    position: absolute;
+    right: 1%;
+    padding: 0.8%;
+    border-radius: 80px;
+}
+
+ul li span:hover{
+    background: rgb(231, 227, 227);
+}
+
+@media screen and (max-width: 850px) {
+    .main {
+        width: 80%;
+        padding: 10px 20px 30px;
+    }
+
+    .add-area button {
+        width: 20%;
+        height: 5vh;
+        font-size: 90%;
+    }
+
+    .add-area button:hover {
+        width: 22%;
+    } 
+
+    ul li {
+        font-size: 120%;
+        padding: 3% 2% 3% 5%;
+    }
+
+    ul li::before {
+        left: 0;
+        padding: 1.8%;
+        scale: 0.9;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .main {
+        width: 95%;
+        padding: 8px 15px 20px;
+    }
+
+    .add-area input {
+        width: 60%;
+        font-size: 80%;
+    }
+
+    .add-area button {
+        width: 20%;
+        height: 4vh;
+        font-size: 80%;
+    }
+
+    .add-area button:hover {
+        width: 20%;
+    } 
+
+    ul li {
+        font-size: 90%;
+        padding: 3% 3% 3% 5%;
+    }
+
+    ul li::before {
+        padding: 1.8%;
+        scale: 1;
+    }
+}
